@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Send SMS</title>
+    <style>
+      #heading{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="row my-5">
+      <div class="col-md-4 offset-md-4">
+        <div class="card">
+          <h1 id="heading">Send SMS</h1>
+          <div class="card-body">
+            <form class="" action="/send" method="post">
+              <div class="form-group">
+              <input class="form-control" type="text" name="phone" value="" required placeholder="Enter mobile number">
+              </div>
+
+              <div class="form-group">
+                <input class="form-control" type="text" name="message" value="" placeholder="Message">
+              </div>
+
+              <div class="form-group">
+                <span><strong>Send using:&nbsp;</strong></span>
+                <label class="radio-inline"><input type="radio" name="method" checked value="VonageAPI" >Vonage API</label>
+                &nbsp;&nbsp;
+                <label class="radio-inline"><input type="radio" name="method" value="Fast2SMS">Fast2SMS API</label>
+              </div>
+
+              <div class="form-group">
+                <button class="btn form-control btn-primary">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
